@@ -59,7 +59,7 @@ export default function Home () {
             <br /> se organizan 🍓
           </h1>
           <p>
-            Foody te ayuda a organizar, planificar y compartir tus 
+            Foody te ayuda a organizar, planificar y compartir tus
             <br />
             recetas favoritas con cualquier persona.
             <br /> Crea tu cuenta y empieza tu nuevo estilo de vida!
@@ -183,36 +183,36 @@ export default function Home () {
           }
         }
 
-  @media ${device.laptopL} {
-    main > :global(svg) {
-      width: auto;
-    }
-  }
+        @media ${device.laptopL} {
+          main > :global(svg) {
+            width: auto;
+          }
+        }
 
-  @media ${device.laptop} {
-    main > :global(svg) {
-      height: 15em;
-      margin-bottom: 3em;
-    }
-    main {
-      flex-direction: column-reverse;
-    }
-    section {
-      padding: 0;
-    }
-  }
+        @media ${device.laptop} {
+          main > :global(svg) {
+            height: 15em;
+            margin-bottom: 3em;
+          }
+          main {
+            flex-direction: column-reverse;
+          }
+          section {
+            padding: 0;
+          }
+        }
 
-  @media ${device.mobileL} {
-    main > :global(svg) {
-      display: none;
-    }
-    h1 {
-      font-size: 1.5em;
-    }
-    p {
-      font-size: 0.8em;
-    }
-  }
+        @media ${device.mobileL} {
+          main > :global(svg) {
+            display: none;
+          }
+          h1 {
+            font-size: 1.5em;
+          }
+          p {
+            font-size: 0.8em;
+          }
+        }
 
       `}</style>
     </>

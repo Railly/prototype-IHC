@@ -11,8 +11,10 @@ import Logo from 'components/Icons/Logo'
 import Logout from 'components/Icons/Logout'
 import Search from 'components/Icons/Search'
 import Settings from 'components/Icons/Settings'
+import Modal from 'components/Modal'
 import { device } from 'styles/devices'
-import {useRouter} from 'next/router'
+import { useRouter } from 'next/router'
+import { useState } from 'react'
 
 const cookbooks = [
   {
@@ -23,6 +25,12 @@ const cookbooks = [
 
 export default function App () {
   const router = useRouter()
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggleModal = () => {
+    setIsOpen(!isOpen)
+  }
+
   return(
     <>
         <div style={{ display: 'grid', gridTemplateColumns: '2fr 25fr 45fr' }}>
@@ -89,7 +97,7 @@ export default function App () {
                       />
                   )}
                 <div className="button_container">
-                  <AppButton onClick={() => {}} type="primary">
+                  <AppButton onClick={toggleModal} type="primary">
                     NUEVO LIBRO
                   </AppButton>
                 </div>
@@ -98,6 +106,7 @@ export default function App () {
           <section className="second_page">
             <FourCharacters />
           </section>
+        <Modal toggleModal={toggleModal} isOpen={isOpen} />
         </div>
       <style jsx>{`
         li {
