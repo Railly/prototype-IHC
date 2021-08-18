@@ -17,7 +17,7 @@ import {useRouter} from 'next/router'
 const cookbooks = [
   {
     id: 0,
-    name: "Libro de prueba"
+    name: "Receta de prueba"
   }
 ]
 
@@ -85,12 +85,12 @@ export default function App () {
                       <Cookbook
                         key={cookbook.id}
                         name={cookbook.name}
-                        path="/app/book"
+                        path="/app/book/recipe"
                       />
                   )}
                 <div className="button_container">
                   <AppButton onClick={() => {}} type="primary">
-                    NUEVO LIBRO
+                    NUEVA RECETA
                   </AppButton>
                 </div>
               </div>

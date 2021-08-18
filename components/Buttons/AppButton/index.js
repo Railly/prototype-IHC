@@ -42,12 +42,13 @@ export default function AppButton ({ children, onClick, disabled, type }) {
 
   return (
     <>
-      <button onClick={onClick} disabled={disabled}>
+      <button type="button" onClick={onClick} disabled={disabled}>
         {type === 'google' && <Google width={20} height={20} />}
         {children}
       </button>
       <style jsx>{`
         button {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
           cursor: ${!disabled && 'pointer'};
           display: flex;
           justify-content: space-evenly;

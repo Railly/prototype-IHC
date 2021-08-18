@@ -1,25 +1,16 @@
-import AppButton from 'components/Buttons/AppButton'
 import Avatar from 'components/Avatar'
 import Books from 'components/Icons/Books'
 import BurguerMenu from 'components/Icons/BurguerMenu'
 import Calendar from 'components/Icons/Calendar'
-import Cookbook from 'components/Cookbook'
 import Feedback from 'components/Icons/Feedback'
-import FourCharacters from 'components/Icons/FourCharacters'
 import Link from 'next/link'
-import Logo from 'components/Icons/Logo'
 import Logout from 'components/Icons/Logout'
 import Search from 'components/Icons/Search'
 import Settings from 'components/Icons/Settings'
 import { device } from 'styles/devices'
 import {useRouter} from 'next/router'
+import NewRecipe from 'components/NewRecipe' 
 
-const cookbooks = [
-  {
-    id: 0,
-    name: "Libro de prueba"
-  }
-]
 
 export default function App () {
   const router = useRouter()
@@ -74,30 +65,7 @@ export default function App () {
               <BurguerMenu onClick={() => {}} />
             </ul>
           </nav>
-          <section>
-            <div>
-              <Logo />
-            </div>
-            <p>Crea un libro de cocina a selecciona uno :)</p>
-              <div className="cookbooks">
-                {cookbooks &&
-                  cookbooks.map((cookbook) =>
-                      <Cookbook
-                        key={cookbook.id}
-                        name={cookbook.name}
-                        path="/app/book"
-                      />
-                  )}
-                <div className="button_container">
-                  <AppButton onClick={() => {}} type="primary">
-                    NUEVO LIBRO
-                  </AppButton>
-                </div>
-              </div>
-          </section>
-          <section className="second_page">
-            <FourCharacters />
-          </section>
+          <NewRecipe _title="Receta de prueba"/>
         </div>
       <style jsx>{`
         li {

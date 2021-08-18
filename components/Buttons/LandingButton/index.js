@@ -16,6 +16,7 @@ export default function Button ({ children, type, toPath }) {
       </Link>
       <style jsx>{`
         button {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
           border: 1px solid
             ${type === 'secondary' ? 'var(--orange)' : 'transparent'};
           width: 20em;

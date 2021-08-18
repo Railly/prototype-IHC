@@ -4,6 +4,11 @@ import {useRouter} from 'next/router'
 
 export default function Login () {
   const router = useRouter()
+
+  const handleClick = () => {
+    router.push('/app')
+  }
+
   return(
     <>
       <div className="container">
@@ -17,10 +22,10 @@ export default function Login () {
           <label>Contraseña</label>
           <input type="password" />
 
-          <AppButton disabled={false} onClick={router.push('/app')} type="primary">
+          <AppButton disabled={false} onClick={handleClick} type="primary">
             Iniciar Sesion
           </AppButton>
-          <AppButton disabled={false} onClick={router.push('/app')} type="google">
+          <AppButton disabled={false} onClick={handleClick} type="google">
             Continuar con Google
           </AppButton>
           <div>
