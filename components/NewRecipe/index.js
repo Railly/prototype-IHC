@@ -6,6 +6,7 @@ import StepsForm from 'components/Forms/StepsForm'
 import IngredientsForm from 'components/Forms/IngredientsForm'
 import PreviewRecipe from 'components/PreviewRecipe'
 import {useState} from 'react'
+import {useRouter} from 'next/router'
 
 const DRAG_IMAGE_STATES = {
   ERROR: -1,
@@ -25,7 +26,7 @@ export default function NewRecipe () {
   const [ingredients, setIngredients] = useState([])
   const [steps, setSteps] = useState([])
   
-  console.log(img);
+  const router = useRouter()
 
   const onChangeTitle = (e) => {
     e.preventDefault()
